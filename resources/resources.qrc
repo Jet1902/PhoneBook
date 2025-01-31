@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/toolbar">
+        <file>addIcon.png</file>
+        <file>deleteIcon.png</file>
+        <file>editIcon.png</file>
+        <file>loadIcon.png</file>
+        <file>saveIcon.png</file>
+    </qresource>
+</RCC>

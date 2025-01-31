@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>945</width>
+    <height>651</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Phone book</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QLineEdit" name="searchLine">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="QTable">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::SingleSelection</enum>
+      </property>
+      <property name="selectionBehavior">
+       <enum>QAbstractItemView::SelectRows</enum>
+      </property>
+      <attribute name="horizontalHeaderCascadingSectionResizes">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderDefaultSectionSize">
+       <number>200</number>
+      </attribute>
+      <attribute name="horizontalHeaderHighlightSections">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="horizontalHeaderMinimumSectionSize">
+       <number>100</number>
+      </attribute>
+      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="horizontalHeaderStretchLastSection">
+       <bool>true</bool>
+      </attribute>
+      <attribute name="verticalHeaderStretchLastSection">
+       <bool>false</bool>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Surname</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Number</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>945</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Контакт</string>
+    </property>
+    <addaction name="actionAddContact"/>
+    <addaction name="actionEditContact"/>
+    <addaction name="actionDeleteContact"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionLoad"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAddContact"/>
+   <addaction name="actionEditContact"/>
+   <addaction name="actionDeleteContact"/>
+   <addaction name="separator"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionLoad"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAddContact">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/toolbar/addIcon.png</normaloff>:/toolbar/addIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Добавить контакт</string>
+   </property>
+   <property name="toolTip">
+    <string>Добавить контакт</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionDeleteContact">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/toolbar/deleteIcon.png</normaloff>:/toolbar/deleteIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Удалить контакт</string>
+   </property>
+   <property name="toolTip">
+    <string>Удалить контакт</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionEditContact">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/toolbar/editIcon.png</normaloff>:/toolbar/editIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Редактировать контакт</string>
+   </property>
+   <property name="toolTip">
+    <string>Редактировать контакт</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionLoad">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/toolbar/loadIcon.png</normaloff>:/toolbar/loadIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Загрузить книгу</string>
+   </property>
+   <property name="toolTip">
+    <string>Загрузить книгу</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="resources/resources.qrc">
+     <normaloff>:/toolbar/saveIcon.png</normaloff>:/toolbar/saveIcon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Сохранить книгу</string>
+   </property>
+   <property name="toolTip">
+    <string>Сохранить книгу</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
